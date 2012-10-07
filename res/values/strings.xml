@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Quick Messenger</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Quick Messenger</string>
+    <string name="title_activity_display_message">Preview</string>
+    <string-array name="spinner_messages">
+        <item>On My Way</item>
+        <item>You just received a text from my app.</item>
+    </string-array>
+
+</resources>

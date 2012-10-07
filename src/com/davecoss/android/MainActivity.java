@@ -37,8 +37,9 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(this, DisplayMessageActivity.class);
     	EditText editText = (EditText) findViewById(R.id.editText1);
     	Spinner msg_spinner = (Spinner) findViewById(R.id.spinner1);
-    	String message = editText.getText().toString();
-    	message = message + " MSG: " + msg_spinner.getSelectedItem().toString();
+    	String number = editText.getText().toString();
+    	String message = "MSG: " + msg_spinner.getSelectedItem().toString();
+    	message = message + "\nSent to: " + number;
     	intent.putExtra(EXTRA_MESSAGE, message);
     	startActivity(intent);
     }
@@ -49,10 +50,10 @@ public class MainActivity extends Activity {
     	EditText editText = (EditText) findViewById(R.id.editText1);
     	Spinner msg_spinner = (Spinner) findViewById(R.id.spinner1);
     	String number = editText.getText().toString();
-    	String msg = "MSG:\n" + msg_spinner.getSelectedItem().toString();
+    	String msg = msg_spinner.getSelectedItem().toString();
     	sm.sendTextMessage(number, null, msg, null, null);
     	EditText send_status = (EditText) findViewById(R.id.send_status);
-    	send_status.setText("\nSent to " + number);
+    	send_status.setText("Sent to " + number);
     	
     	// Save last number used
     	SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);

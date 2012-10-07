@@ -23,10 +23,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="phone" >
+        android:inputType="phone">
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lookup Contact"
+        android:onClick="pickContact" />
 
     <Button
         android:id="@+id/button2"

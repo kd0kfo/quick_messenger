@@ -7,6 +7,8 @@
     <string name="title_activity_display_message">Preview</string>
     <string-array name="spinner_messages">
         <item>On My Way</item>
+        <item>blah</item>
+        <item>w00t</item>
         <item>You just received a text from my app.</item>
     </string-array>
 

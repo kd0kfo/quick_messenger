@@ -6,7 +6,6 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.TextView;
 
 public class MessageDB extends SQLiteOpenHelper {
 
@@ -67,14 +66,20 @@ public class MessageDB extends SQLiteOpenHelper {
 		{
 			retval[i++] = rows.getString(0);
 		}
-//		for(int i = 0;i<numrows;i++,rows.moveToNext())
-//		{
-//			if(rows.isAfterLast())
-//				break;
-//			retval[i] = rows.getString(0);
-//		}
 		
 		return retval;
+	}
+
+	public void add_message(String strMessage) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.execSQL("insert into " + MESSAGE_TABLE_NAME + "(message, frequency) values ('" 
+				+ strMessage + "', 0);");
+	}
+
+	public void remove_message(String strMessage) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.execSQL("delete from " + MESSAGE_TABLE_NAME + " where message = '" 
+				+ strMessage + "';");
 	}
 
 }

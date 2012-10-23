@@ -29,6 +29,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.davecoss.android.MainActivity" />
         </activity>
+        <activity android:name=".EditMessages" android:label='"Edit Messages"'></activity>
     </application>
 
 </manifest>

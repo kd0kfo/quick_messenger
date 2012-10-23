@@ -1,0 +1,4 @@
+1.1:
+	Added use of SQLite Database.
+	Added Activity to modify message database.
+	Added Version Menu Button.
